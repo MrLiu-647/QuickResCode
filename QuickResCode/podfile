@@ -1,0 +1,9 @@
+platform :ios, '9.0'
+
+target :QuickResCode do
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'SVProgressHUD'
+pod 'Masonry'
+
+end

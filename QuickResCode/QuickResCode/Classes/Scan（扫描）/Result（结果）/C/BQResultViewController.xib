@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BQResultViewController">
+            <connections>
+                <outlet property="TextView" destination="OPF-sd-zcq" id="eDh-gZ-03g"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="9dT-Ea-njr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="扫描结果：" translatesAutoresizingMaskIntoConstraints="NO" id="OPF-sd-zcq">
+                    <rect key="frame" x="20" y="40" width="335" height="293.5"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEB-oK-rVd">
+                    <rect key="frame" x="50" y="373.5" width="275" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="275" id="iwI-jJ-pUc"/>
+                        <constraint firstAttribute="height" constant="40" id="n3R-uj-LUI"/>
+                    </constraints>
+                    <state key="normal" title="复制文本到剪切板"/>
+                    <state key="highlighted">
+                        <color key="titleColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorWithUIColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="copyLinkBtnOnClick:" destination="-1" eventType="touchUpInside" id="4Kp-zx-LXa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="on4-P9-xLx">
+                    <rect key="frame" x="50" y="448.5" width="275" height="40"/>
+                    <state key="normal" title="返回"/>
+                    <state key="highlighted">
+                        <color key="titleColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorWithUIColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="backBtnOnClick:" destination="-1" eventType="touchUpInside" id="VSu-1P-NUj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="on4-P9-xLx" firstAttribute="trailing" secondItem="IEB-oK-rVd" secondAttribute="trailing" id="9hP-qO-aMt"/>
+                <constraint firstAttribute="bottom" secondItem="9dT-Ea-njr" secondAttribute="bottom" id="CFr-bo-ERN"/>
+                <constraint firstItem="IEB-oK-rVd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="60" id="Cte-8I-H9h"/>
+                <constraint firstItem="IEB-oK-rVd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DdV-ph-yJW"/>
+                <constraint firstItem="9dT-Ea-njr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fu2-CX-zqo"/>
+                <constraint firstItem="on4-P9-xLx" firstAttribute="height" secondItem="IEB-oK-rVd" secondAttribute="height" id="QJg-vz-oH5"/>
+                <constraint firstAttribute="trailing" secondItem="9dT-Ea-njr" secondAttribute="trailing" id="QK1-Vr-CEb"/>
+                <constraint firstItem="on4-P9-xLx" firstAttribute="leading" secondItem="IEB-oK-rVd" secondAttribute="leading" id="blY-4u-qVK"/>
+                <constraint firstItem="IEB-oK-rVd" firstAttribute="top" secondItem="OPF-sd-zcq" secondAttribute="bottom" constant="40" id="hdg-jO-uIY"/>
+                <constraint firstItem="OPF-sd-zcq" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="lvl-CS-XeY"/>
+                <constraint firstItem="OPF-sd-zcq" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="qJm-Wt-GEX"/>
+                <constraint firstItem="on4-P9-xLx" firstAttribute="top" secondItem="IEB-oK-rVd" secondAttribute="bottom" constant="35" id="t8x-2Q-ugN"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="OPF-sd-zcq" secondAttribute="trailing" constant="20" id="u36-3p-ehl"/>
+                <constraint firstItem="9dT-Ea-njr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xpZ-GE-UJM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-568" y="-69"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg" width="375" height="667"/>
+    </resources>
+</document>

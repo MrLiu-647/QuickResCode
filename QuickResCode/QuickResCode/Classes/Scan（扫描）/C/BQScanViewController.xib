@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BQScanViewController">
+            <connections>
+                <outlet property="scanBackView" destination="LYl-6c-crx" id="iRQ-uk-WtJ"/>
+                <outlet property="toBottom" destination="kxj-CN-QHk" id="OQu-3u-lpJ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="RcC-uv-6RM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExQ-ie-kal" customClass="BQButton">
+                    <rect key="frame" x="50" y="403.5" width="275" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Dgs-nA-zXM"/>
+                    </constraints>
+                    <state key="normal" title="取消扫描">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorWithUIColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cancelScanBtnOnClick:" destination="-1" eventType="touchUpInside" id="5bE-LD-eM2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fp-Tp-1Ux" customClass="BQButton">
+                    <rect key="frame" x="50" y="478.5" width="275" height="40"/>
+                    <state key="normal" title="打开灯光"/>
+                    <state key="highlighted">
+                        <color key="titleColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorWithUIColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYl-6c-crx">
+                    <rect key="frame" x="87.5" y="163.5" width="200" height="200"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="Bnp-VJ-FNE">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="200" id="6FY-zW-qPu"/>
+                                <constraint firstAttribute="width" constant="200" id="e6p-Uh-Xst"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scanline_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="TGl-Q1-RuP">
+                            <rect key="frame" x="-0.5" y="-0.5" width="200" height="200"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="2C4-QK-K0j"/>
+                                <constraint firstAttribute="height" constant="200" id="d5B-Bz-M7M"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="TGl-Q1-RuP" firstAttribute="leading" secondItem="LYl-6c-crx" secondAttribute="leading" id="2Wm-gI-piJ"/>
+                        <constraint firstItem="Bnp-VJ-FNE" firstAttribute="top" secondItem="LYl-6c-crx" secondAttribute="top" id="4yr-VK-0jK"/>
+                        <constraint firstItem="TGl-Q1-RuP" firstAttribute="width" secondItem="Bnp-VJ-FNE" secondAttribute="width" id="BJi-m0-10o"/>
+                        <constraint firstAttribute="width" constant="200" id="BbU-66-rQs"/>
+                        <constraint firstItem="Bnp-VJ-FNE" firstAttribute="leading" secondItem="LYl-6c-crx" secondAttribute="leading" id="F2A-uS-15Q"/>
+                        <constraint firstAttribute="bottom" secondItem="Bnp-VJ-FNE" secondAttribute="bottom" id="GTh-UJ-AM3"/>
+                        <constraint firstItem="TGl-Q1-RuP" firstAttribute="height" secondItem="Bnp-VJ-FNE" secondAttribute="height" id="hCA-Ea-UzL"/>
+                        <constraint firstAttribute="bottom" secondItem="TGl-Q1-RuP" secondAttribute="bottom" id="kxj-CN-QHk"/>
+                        <constraint firstAttribute="height" constant="200" id="nKI-tK-oqL"/>
+                        <constraint firstAttribute="trailing" secondItem="Bnp-VJ-FNE" secondAttribute="trailing" id="s5L-z1-Sxp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="8fp-Tp-1Ux" firstAttribute="height" secondItem="ExQ-ie-kal" secondAttribute="height" id="3Fb-Mp-aHC"/>
+                <constraint firstItem="LYl-6c-crx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-70" id="Kgd-0l-QdC"/>
+                <constraint firstItem="8fp-Tp-1Ux" firstAttribute="top" secondItem="ExQ-ie-kal" secondAttribute="bottom" constant="35" id="QTA-nS-Xa6"/>
+                <constraint firstItem="ExQ-ie-kal" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="Rmd-QO-LFD"/>
+                <constraint firstItem="ExQ-ie-kal" firstAttribute="top" secondItem="LYl-6c-crx" secondAttribute="bottom" constant="40" id="YDf-Xt-Ehc"/>
+                <constraint firstItem="8fp-Tp-1Ux" firstAttribute="trailing" secondItem="ExQ-ie-kal" secondAttribute="trailing" id="a4w-FH-v2X"/>
+                <constraint firstItem="8fp-Tp-1Ux" firstAttribute="leading" secondItem="ExQ-ie-kal" secondAttribute="leading" id="uBm-Sy-mWQ"/>
+                <constraint firstAttribute="trailing" secondItem="ExQ-ie-kal" secondAttribute="trailing" constant="50" id="vAP-Bv-Ykf"/>
+                <constraint firstItem="LYl-6c-crx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vum-IN-Lx5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="puf-pr-7bI"/>
+            <point key="canvasLocation" x="22" y="-124"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="qrcode_border" width="51" height="51"/>
+        <image name="qrcode_scanline_qrcode" width="218" height="170"/>
+    </resources>
+</document>
